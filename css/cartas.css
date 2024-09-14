@@ -1,0 +1,14 @@
+#container-cartas{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 5%;
+    
+}
+
+
+#container-cartas img{
+    width: 100%;
+    
+}

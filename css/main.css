@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*CONTENEDOR DEL PRIMER DIV*/
+.principal{
+    font-family: 'Poppins', sans-serif ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: #e22838;
+    padding: 40px 0 40px 0;
+}
+
+/* LETRERO DE TEXTO Y BOTON*/
+
+.cartel{
+    width: 100%;
+}
+
+.title{
+    font-size: 55px;
+    line-height: 60px;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif ;
+    padding: 10px 80px;
+}
+
+.paragraph{
+    margin-bottom: 20px;
+    padding: 10px 80px;
+}
+
+#boton-cartel{
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #9b0404;
+    padding: .5rem .7rem;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 80px;
+}
+
+/*IMAGEN DE COMIDA*/
+
+.comida-kfc{
+    padding-right: 5%;
+    padding-top:  3%;
+}
+
+.comida-kfc img{
+    width: 97%;
+}
+
+/* CONTENEDOR DEL MENU */
+
+#container-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+#botonMenu{
+    color: #ffffff;
+    background-color: #e22838;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    border-radius: 30px;
+}
+
+.title-menu{
+    color: #000000;
+    font-family: 'Poppins', sans-serif ;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#menu-targetas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 40px 30px;
+    width: 80%;
+    
+}
+
+.targeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 20px;
+    border-bottom: 1px solid #000;
+    
+}
+
+#imagen-targeta{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.descripcion{
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Animaciones solo para dispositivos de escritorio*/
+
+@media (min-width: 600px){
+    .targeta{
+        cursor: pointer;
+        transition-duration: 190ms;
+        transition-property: scale;
+
+        &:hover{
+            border-bottom: 2px solid #ee1f1f;
+            scale: 1.05;
+        }
+    }
+}
+
+/* @MEDIA QUERY PARA IMAGEN PRINCIPAL PARA MONITORES GRANDES */
+
+@media (min-width: 906px) {
+    .cartel{
+        padding-top: 5%;
+        padding-left: 6% ;
+    }
+}
+
+/* VISTA DE COMLUMNA DEL LA IMAGEN PRINCIPAL PARA DISPOSITIVOS MENORES A 800PX DE WIDTH */
+
+@media (max-width: 800px) {
+    .principal{ 
+        flex-direction: column;
+    }
+
+    .comida-kfc{
+        display: flex;
+        justify-content: center;
+    }
+
+    .comida-kfc img{
+        width: 70%;
+    }
+}
+
+/* GRID DE TARJETAS MIENTRAS LA PANTALLA TENGA UN WIDTH MENOR A 503PX*/
+
+@media (max-width: 503px){
+    #menu-targetas{
+        grid-template-columns: repeat(2, minmax(100px, 1fr))
+    }
+
+}
+
